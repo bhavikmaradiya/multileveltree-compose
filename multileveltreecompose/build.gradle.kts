@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "io.github.bhavikmaradiya.multileveltreecompose"
+    namespace = "com.bhavikm.multileveltreecompose"
     compileSdk = 35
 
     defaultConfig {
