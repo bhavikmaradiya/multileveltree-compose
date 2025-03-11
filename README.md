@@ -20,7 +20,7 @@ dependencies {
 
 ## Usage
 
-### 1. Define Your Tree Model
+### 1. Define Your Data In Node Model
 
 ```kotlin
 data class Node(
