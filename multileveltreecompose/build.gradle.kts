@@ -2,10 +2,11 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.vanniktech.maven.publish") version "0.29.0"
 }
 
 android {
-    namespace = "com.bhavikm.multileveltreecompose"
+    namespace = "io.github.bhavikmaradiya.multileveltreecompose"
     compileSdk = 35
 
     defaultConfig {
