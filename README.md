@@ -1,5 +1,9 @@
 # MultilevelTree-Compose
 
+![Jetpack Compose](https://img.shields.io/badge/jetpack-compose-%237F52FF.svg?style=for-the-badge&logo=jetpack-compose&logoColor=white) ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white) ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.bhavikmaradiya/multileveltreecompose)](https://central.sonatype.com/artifact/io.github.bhavikmaradiya/multileveltreecompose) ![Static Badge](https://img.shields.io/badge/minSdk-21-blue?link=https%3A%2F%2Fgithub.com%2Fbhavikmaradiya%2Fmultileveltree-compose%2Fblob%2Fmain%2Fbuild.gradle.kts)
+
 A Jetpack Compose library for creating drag-and-droppable multilevel tree structures with ease.
 
 ## Features
@@ -14,13 +18,13 @@ Add the dependency in your project's `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("com.github.bhavikmaradiya:multileveltree-compose:latest-version")
+    implementation("io.github.bhavikmaradiya:multileveltreecompose:latest-version")
 }
 ```
 
 ## Usage
 
-### 1. Define Your Data In Node Model
+### 1. Define Your Tree Model
 
 ```kotlin
 data class Node(
@@ -52,6 +56,10 @@ TreeView(nodes, modifier) { node ->
 - Customize node appearance with your own Composable UI
 - Configure drag/drop sensitivity
 - Define rules for allowed moves
+
+## Artifact Information
+
+You can find the library on [Sonatype Central Repository](https://central.sonatype.com/artifact/io.github.bhavikmaradiya/multileveltreecompose).
 
 ## License
 
