@@ -55,21 +55,3 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
-/*
-
-<server>
-<id>${server}</id>
-<username>LoUzdA8r</username>
-<password>4nuBnvqfJm2nmGpEr8suGYCEQHyMkZdC68IP8eW82TJe</password>
-</server>
-
-phrase: bhavik
-gpg: /Users/bhavikmaradiya/.gnupg/trustdb.gpg: trustdb created
-gpg: directory '/Users/bhavikmaradiya/.gnupg/openpgp-revocs.d' created
-gpg: revocation certificate stored as '/Users/bhavikmaradiya/.gnupg/openpgp-revocs.d/793CD775248E704308FBDA8BD006C41D05E986A7.rev'
-public and secret key created and signed.
-
-pub   ed25519 2025-03-11 [SC] [expires: 2028-03-10]
-793CD775248E704308FBDA8BD006C41D05E986A7
-uid                      Bhavik Maradiya <bhavikmaradiya768@gmail.com>
-sub   cv25519 2025-03-11 [E] [expires: 2028-03-10]*/
