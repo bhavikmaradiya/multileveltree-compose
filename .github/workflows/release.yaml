@@ -33,7 +33,7 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Build Compose Permissions Library
+      - name: Build Compose Multilevel-Tree Library
         run: ./gradlew :multileveltreecompose:assembleRelease -Dandroid.useAndroidX=true
 
       - name: Extract Version
