@@ -18,7 +18,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.SECRET }}
           persist-credentials: true
 
       - name: Setup gradle.properties
@@ -70,7 +70,7 @@ jobs:
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SECRET }}
         with:
           tag_name: v${{ env.version }}
           release_name: "Release v${{ env.version }}"
@@ -83,7 +83,7 @@ jobs:
       - name: Upload Release Artifact
         uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SECRET }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: permissions-compose/build/outputs/aar/permissions-compose-release.aar
