@@ -89,7 +89,7 @@ object TreeManager {
         val nodeToMove = nodes.findNode(nodeId) ?: return
         val newParent = nodes.findNode(newParentId) ?: return
 
-//    if (isDescendantOf(nodeToMove, newParent, nodes)) return
+        if (nodeToMove.isDirectDescendantOf(newParent, nodes)) return
 
         val updatedTree = nodes.removeNode(nodeId).toList()
 
@@ -203,5 +203,13 @@ object TreeManager {
             current = current.parentId?.let { tree.findNode(it) }
         }
         return false
+    }
+
+    fun <T> Node<T>.isDirectDescendantOf(
+        potentialParent: Node<T>,
+        tree: List<Node<T>>,
+    ): Boolean {
+        val directParent = parentId?.let { tree.findNode(it) }
+        return directParent?.id == potentialParent.id
     }
 }
