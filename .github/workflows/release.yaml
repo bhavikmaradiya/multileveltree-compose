@@ -8,7 +8,7 @@ on:
 
 
 env:
-  VERSION_NAME: 0.0.1+4  # Update this value for each release
+  VERSION_NAME: 0.0.2-alpha  # Update this value for each release
 
 jobs:
   release:
@@ -61,8 +61,8 @@ jobs:
 
       - name: Create Git Tag
         run: |
-          git config --global user.email "cavinmacwan1@gmail.com"
-          git config --global user.name "Cavin"
+          git config --global user.email "bhavikmaradiya768@gmail.com"
+          git config --global user.name "Bhavik M"
           git tag -a v${{ env.version }} -m "Release v${{ env.version }}"
           git push origin v${{ env.version }}
 
