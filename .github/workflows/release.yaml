@@ -34,7 +34,7 @@ jobs:
           java-version: '17'
 
       - name: Build Compose Permissions Library
-        run: ./gradlew :permissions-compose:assembleRelease -Dandroid.useAndroidX=true
+        run: ./gradlew :multileveltreecompose:assembleRelease -Dandroid.useAndroidX=true
 
       - name: Extract Version
         id: get_version
