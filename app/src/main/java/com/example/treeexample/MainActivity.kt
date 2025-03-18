@@ -38,11 +38,31 @@ class MainActivity : ComponentActivity() {
 fun Home(modifier: Modifier = Modifier) {
     val nodes = listOf(
         Node(1, data = "Root"),
-        Node(2, parentId = 1, data = "Child 1"),
-        Node(3, parentId = 1, data = "Child 2"),
-        Node(4, parentId = 2, data = "Child 3"),
-        Node(5, parentId = 2, data = "Child 4"),
-        Node(6, parentId = 2, data = "Child 5"),
+        Node(
+            2,
+            parentId = 1,
+            data = "Child 1"
+        ),
+        Node(
+            3,
+            parentId = 1,
+            data = "Child 2"
+        ),
+        Node(
+            4,
+            parentId = 2,
+            data = "Child 3"
+        ),
+        Node(
+            5,
+            parentId = 2,
+            data = "Child 4"
+        ),
+        Node(
+            6,
+            parentId = 2,
+            data = "Child 5"
+        ),
     )
 
     TreeView(nodes, modifier) { node ->
