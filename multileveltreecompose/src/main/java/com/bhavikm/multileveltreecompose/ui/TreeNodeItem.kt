@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.sp
 import com.bhavikm.multileveltreecompose.model.Node
 import com.bhavikm.multileveltreecompose.utils.TreeManager.findClosestChild
 import com.bhavikm.multileveltreecompose.utils.TreeManager.findNode
+import com.bhavikm.multileveltreecompose.utils.TreeManager.isDirectDescendantOf
 import com.bhavikm.multileveltreecompose.utils.TreeManager.moveNode
 import com.bhavikm.multileveltreecompose.utils.TreeManager.moveNodeToRoot
 
@@ -52,7 +53,7 @@ fun <T> TreeNodeItem(
     treeState: MutableState<List<Node<T>>>,
     onExpand: (Int) -> Unit,
     expandedNodes: Set<Int>,
-    item: @Composable (Node<T>) -> Unit,  // ✅ Custom UI from the user
+    item: @Composable (Node<T>) -> Unit,
 ) {
     val textMeasurer = rememberTextMeasurer()
     Box(
@@ -104,11 +105,11 @@ fun <T> TreeNodeItem(
 
                                     if (closestChild != null) {
                                         // Prevent dragging into itself or circular dependencies
-                                        if (fromNode.id == targetNode.id /*||
-                                            fromNode.isDescendantOf(
+                                        if (fromNode.id == targetNode.id ||
+                                            fromNode.isDirectDescendantOf(
                                                 closestChild,
                                                 treeState.value,
-                                            )*/
+                                            )
                                         ) {
                                             return false
                                         }
